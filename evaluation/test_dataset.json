@@ -1,0 +1,11 @@
+[
+  {
+    "question": "Python 代码中使用字符串拼接构造 SQL 查询有什么安全风险？",
+    "answer": "（将系统对 test_bad_code.py 的审查报告填入此处）",
+    "contexts": [
+      "函数 get_user() 使用字符串拼接: query = \"SELECT * FROM users WHERE username = '\" + username + \"'\"",
+      "历史经验：SQL 注入漏洞是 OWASP Top 10 之首，攻击者可通过构造特殊 username 绕过认证"
+    ],
+    "ground_truth": "使用字符串拼接构造 SQL 存在注入风险，攻击者可传入 `' OR '1'='1` 绕过认证。修复方案：使用参数化查询 cursor.execute('SELECT * FROM users WHERE username = ?', (username,))"
+  }
+]
