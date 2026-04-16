@@ -140,11 +140,6 @@ print('评测结果:', scores)
 "
 ```
 
-**基线数据参考**:
-* Faithfulness（忠实度）: `~0.87`
-* Answer Relevancy（相关性）: `~0.91`
-* Context Precision（经验召回精度）: `~0.84`
-
 ---
 
 ## 📂 核心目录结构
